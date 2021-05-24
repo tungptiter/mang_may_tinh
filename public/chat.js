@@ -9,24 +9,24 @@ var message = document.getElementById('message'),
       feedback = document.getElementById('feedback');
 
 // Emit events
-btn.addEventListener('click', function(){
-    socket.emit('chat', {
+btn.addEventListener('click', function(){    //client gửi dữ liệu lên server
+    socket.emit('chat', { 
         message: message.value,
         handle: handle.value
     });
     message.value = "";
 });
 
-message.addEventListener('keypress', function(){
-    socket.emit('typing', handle.value);
+message.addEventListener('keypress', function(){ 
+    socket.emit('typing', handle.value);   // lắng nghe xem có đang gõ ô tin nhắn không
 })
 
 // Listen for events
-socket.on('chat', function(data){
+socket.on('chat', function(data){ // tin nhắn
     feedback.innerHTML = '';
     output.innerHTML += '<p><strong>' + data.handle + ': </strong>' + data.message + '</p>';
 });
 
-socket.on('typing', function(data){
+socket.on('typing', function(data){ // hiển thị ai đang nhập tin nhắn
     feedback.innerHTML = '<p><em>' + data + ' is typing a message...</em></p>';
 });

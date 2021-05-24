@@ -8,14 +8,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/iamshaunjp/websockets-playlist.git"
+    "url": "https://github.com/tungptiter/mang_may_tinh.git"
   },
-  "author": "The Net Ninja",
+  "author": "Tung dep trai",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/iamshaunjp/websockets-playlist/issues"
+    "url": "https://github.com/tungptiter/mang_may_tinh.git"
   },
-  "homepage": "https://github.com/iamshaunjp/websockets-playlist#readme",
+  "homepage": "https://github.com/tungptiter/mang_may_tinh.git#readme",
+  
   "dependencies": {
     "express": "^4.17.1",
     "socket.io": "^1.7.4"
